@@ -2,18 +2,15 @@
 # HKUST Computer Science and Engineering Department 
 # Topic : Fitbit API related Family traced project
 
-# me : Li Sing Lun(20317033) 
-
 Group Mates :
+
+<h3>me : Li Sing Lun(20317033)</h3>  
 
 Man Ho Yin (20310267) 
 
 Chan Ho Fung (20310889) 
 
 Yeung Chun Tong(20309115) 
-
-WIL1 
-
 
 Advised  by Prof Wilfred Ng
 
