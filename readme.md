@@ -14,5 +14,6 @@ fypphp -- Php Web portal source code
 
 
 # Android Side
-Fitbit --- Android Source code
-fightnessfighter --- JSON php source code
+
+fightnessfighter --- JSON php source code (Collborate)
+Fitbit --- Android Source code (Other)
