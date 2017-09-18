@@ -6,12 +6,15 @@ Advised  by Prof Wilfred Ng
 
 Introduction 
 
+
+
+
 # Android Side
 
 Fitbit --- Android Source code
-fightnessfighter --- Android JSON php source code
+fightnessfighter --- JSON php source code
 
 # Web portal Side  <b>(My part)</b>
-fypphp -- Php Web portal source code
+fypphp -- Php Web portal source code 
 
 # wildb.sql --- sql database binaries <b>(My part)</b>
