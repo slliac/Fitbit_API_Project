@@ -2,6 +2,19 @@
 # HKUST Computer Science and Engineering Department 
 # Topic : Fitbit API related Family traced project
 
+# me : Li Sing Lun(20317033) 
+
+Group Mates :
+
+Man Ho Yin (20310267) 
+
+Chan Ho Fung (20310889) 
+
+Yeung Chun Tong(20309115) 
+
+WIL1 
+
+
 Advised  by Prof Wilfred Ng
 
 # Objective
@@ -20,7 +33,7 @@ Setting a regular exercise goal is important for everyone. In this project we bu
 
 The most challenging objective was automatically syncing smart bracelet data with the Fitbit database and then store it on our database server, because it needs to be done every day. If only one family member forgets to synchronize his or her smart bracelet with the Fitbit database, then his or her families’ data will not be accurate in the family-based comparison. To deal with this, we have remind users to sync their smart bracelets every day, and we also wrote a PHP server script that automatically grabs the user data from the Fitbit server and store it in our own database.
 
-# Detail
+# Theory
 
 # Auto synchronization everyday
 
@@ -29,14 +42,6 @@ We set analysis.php that sent request to the Fitbit server by the updated access
 
 In case for making the datum maintained at least in the same day , therefore both update would running in the same times, for make sure the datum would at least update in the same days. But the user want to see the most updatest result for himself , only that user would updated in the most updated date.
 
-# Programming Tools
-
-Application Android PHP Web application MySQL database
-
-Language Java PHP SQL
-Framework Android CodeIgniter/pingedo/Material/EasyUI /
-IDE Android Studio,SilkTest(Testing) Notepad++ / Atom/Codekit MySQL workbench
-Purpose Gaming, data review Data review, social Store data, data determination
 #  Database Setup
 
 The database is used to store the data that retrieve from Fitbit. The data can later be used to configure the game such as user's character is dominated by their exercise load. Therefore, the data of social function from the PHP web application provided also be stored from the database. For database management, instead of MySQL, we are also suggested to used other reliable SQL framework instead of MySQL, as well as MySQL have risk for closed sourced develop, therefore we are considering whether using the MariaDB for replacing original MySQL application.
@@ -50,8 +55,6 @@ UI Framework not only respect to the outlook but also data management in a forma
 For datum description in chart format, I would recommend to use the chart.js for described the datum in a user friendly mode also with animation as well as users login PHP page by local PC. Therefore, animation could be performed for enhanced overall outlook.
 
 For general outlook, PHP would mainly adopt Google Material instead of bootstrap. For further data manipulation, it would be adopts Kendo UI or EasyUI. Sketch and pingedo is recommended to be used for the professional web design. For code background implementation of web, using Codekit as framework and CodeIgniter as backbone would be recommended.
-
-#  PHP Part
 
 #  Architecture
 
