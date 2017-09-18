@@ -39,10 +39,6 @@ We set analysis.php that sent request to the Fitbit server by the updated access
 
 In case for making the datum maintained at least in the same day , therefore both update would running in the same times, for make sure the datum would at least update in the same days. But the user want to see the most updatest result for himself , only that user would updated in the most updated date.
 
-#  Database Setup
-
-The database is used to store the data that retrieve from Fitbit. The data can later be used to configure the game such as user's character is dominated by their exercise load. Therefore, the data of social function from the PHP web application provided also be stored from the database. For database management, instead of MySQL, we are also suggested to used other reliable SQL framework instead of MySQL, as well as MySQL have risk for closed sourced develop, therefore we are considering whether using the MariaDB for replacing original MySQL application.
-
 # Background
 
 Developed with Codeigniter, our web adopted MVC approach for website backbone, and with a better manner for the connection of FITBIT server and our school provided database (MySQL). It provided a clear data management framework for data flow. For example, it provided an alternative way for managed those data Form actions.
