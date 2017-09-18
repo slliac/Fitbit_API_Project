@@ -1,0 +1,902 @@
+/*
+	Theme Name: Mubaan
+  Description: Coming Soon Template
+	Author: ThemePlusPlus
+  Theme URI: http://mubaan.themeplusplus.com
+  Author URI: http://themeforest.net/user/ThemePlusPlus
+	Version: 1.0
+*/
+/* *******************************************************
+	TABLE OF CONTENTS
+	---------------------------
+	 1. Global
+	 2. Popup
+	 	 2.1 More info popup
+      2.1.1 About us
+      2.1.2 Team
+      2.1.3 Portfolio
+	 	 2.2 Contact popup
+      2.2.1 Contact
+   3. Middle
+    3.1 Countdown
+    3.2 Subscribe form
+    3.3 Social links
+	 4. Responsive
+******************************************************* */
+/**
+ * 1. Global
+ * -----------------------------------------------------------------------------
+ */
+body {
+  background-color: #1f1f1f;
+  font-family: 'Raleway', Times new roman , serif;
+  color: #fff;
+}
+
+a {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover, a:link, a:visited {
+  text-decoration: none;
+}
+
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #333;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #333;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #333;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #333;
+}
+
+:focus {
+  outline: none;
+}
+
+::selection {
+  color: #fff;
+}
+
+.alert-success {
+  margin-top: 20px;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.close {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: url("../img/close.png");
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+.close:hover {
+  opacity: 0.7;
+}
+
+.close-small {
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/close-small.png");
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 40px;
+}
+
+.layout {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+.middle-in {
+  position: relative;
+  overflow: auto;
+}
+
+.pace {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 5px;
+  background: #fff;
+  border: 1px solid #fff;
+  overflow: hidden;
+  margin: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-pointer-events: none;
+  pointer-events: none;
+}
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  max-width: 200px;
+  width: 100%;
+  height: 100%;
+  background: #1f1f1f;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+.heading h2 {
+  margin: 50px 0 10px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.heading .sep {
+  width: 80px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+/* Menu hover */
+.btn-hover {
+  overflow: hidden;
+}
+
+.btn-hover:after {
+  width: 0;
+  height: 103%;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-hover:hover,
+.btn-hover:active {
+  color: #0e83cd;
+}
+
+.btn-hover:hover:after {
+  width: 90%;
+  opacity: 1;
+}
+
+.btn-hover:active:after {
+  width: 101%;
+  opacity: 1;
+}
+
+.fancybox-overlay, .fancybox-opened {
+  z-index: 20000;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+}
+
+/**
+ * 2. Popup
+ * -----------------------------------------------------------------------------
+ */
+.popup-container .popup {
+  padding: 50px 10px 50px 30px;
+}
+
+.remodal-wrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.remodal-wrapper .remodal {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.remodal-wrapper .remodal-small {
+  max-width: 500px;
+}
+
+.remodal-wrapper .remodal-small .popup-small {
+  margin: 3px;
+  border: 3px solid #1f1f1f;
+  padding: 30px;
+}
+
+.remodal-wrapper .remodal-small .popup-small .heading h2 {
+  font-size: 30px;
+}
+
+/**
+ * 2.1 More info popup
+ * -----------------------------------------------------------------------------
+ */
+#moreInfoPopup .text {
+  margin-bottom: 30px;
+  line-height: 2;
+  font-size: 15px;
+}
+
+/**
+ * 2.1.1 About us
+ * -----------------------------------------------------------------------------
+ */
+.aboutus .item {
+  margin-bottom: 10px;
+  padding: 30px 15px;
+  border: 1px solid #000;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.aboutus .item i {
+  font-size: 30px;
+}
+
+.aboutus .item h3 {
+  margin-bottom: 15px;
+}
+
+.aboutus .item p {
+  line-height: 1.7;
+}
+
+.aboutus .item:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/**
+ * 2.1.2 Team
+ * -----------------------------------------------------------------------------
+ */
+.team .item {
+  border: 1px solid #000;
+}
+
+.team .item .img {
+  overflow: hidden;
+}
+
+.team .item .img img {
+  max-width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.team .item h3 {
+  margin: 0;
+  border-top: 1px solid #000;
+  padding-top: 20px;
+}
+
+.team .item h4 {
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+.team .item p {
+  margin: 15px 0;
+  padding: 0 15px;
+}
+
+.team .item .social {
+  margin-bottom: 20px;
+}
+
+.team .item .social a {
+  display: inline-block;
+  width: 26px;
+  border: 1px solid #000;
+  margin: 0 5px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.team .item .social a i {
+  color: #000;
+}
+
+.team .item .social a:hover {
+  background-color: #000;
+}
+
+.team .item .social a:hover i {
+  color: #fff;
+}
+
+/**
+ * 2.1.3 Portfolio
+ * -----------------------------------------------------------------------------
+ */
+.portfolio .fancybox {
+  display: block;
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.portfolio .fancybox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio .fancybox .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(31, 31, 31, 0.9);
+  background: linear-gradient(to top, rgba(31, 31, 31, 0.9) 0%, rgba(31, 31, 31, 0.7) 20%, rgba(31, 31, 31, 0.1) 100%);
+  background: -webkit-linear-gradient(to top, rgba(31, 31, 31, 0.9) 0%, rgba(31, 31, 31, 0.7) 20%, rgba(31, 31, 31, 0.1) 100%);
+  background: -o-linear-gradient(to top, rgba(31, 31, 31, 0.9) 0%, rgba(31, 31, 31, 0.7) 20%, rgba(31, 31, 31, 0.1) 100%);
+  background: -ms-linear-gradient(to top, rgba(31, 31, 31, 0.9) 0%, rgba(31, 31, 31, 0.7) 20%, rgba(31, 31, 31, 0.1) 100%);
+  background: linear-gradient(to top, rgba(31, 31, 31, 0.9) 0%, rgba(31, 31, 31, 0.7) 20%, rgba(31, 31, 31, 0.1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4e4ef', endColorstr='#2a2a2a', GradientType=1);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.portfolio .fancybox .hover span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.portfolio .fancybox .hover span i {
+  text-align: center;
+  color: #1f1f1f;
+  font-size: 15px;
+}
+
+.portfolio .fancybox .hover .caption {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  color: #fff;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.portfolio .fancybox .hover .caption h3 {
+  margin: 20px 0 10px;
+}
+
+.portfolio .fancybox .hover .caption p {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.portfolio .fancybox:hover .hover {
+  opacity: 1;
+}
+
+.portfolio .fancybox:hover .hover .caption {
+  bottom: 20px;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+/**
+ * 2.2 Contact popup
+ * -----------------------------------------------------------------------------
+ */
+#contactPopup h2 {
+  margin-bottom: 20px;
+}
+
+#contactPopup p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/**
+ * 2.2.1 Contact
+ * -----------------------------------------------------------------------------
+ */
+#contact-form {
+  margin-bottom: 40px;
+}
+
+#contact-form div > div {
+  position: relative;
+}
+
+#contact-form div > div button,
+#contact-form div > div input,
+#contact-form div > div textarea {
+  width: 100%;
+  border: 1px solid #000;
+  color: #000;
+  background: none;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+
+#contact-form div > div input {
+  height: 35px;
+}
+
+#contact-form div > div label {
+  float: left;
+  font-size: 13px;
+  margin: 9px 0 0 13px;
+}
+
+#contact-form div > div textarea {
+  height: 100px;
+}
+
+#contact-form div > div button {
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+}
+
+.contact-text {
+  text-align: left;
+}
+
+.contact-text h3 {
+  overflow: hidden;
+  line-height: 18px;
+  font-size: 16px;
+}
+
+.contact-text h3 i {
+  float: left;
+  width: 20px;
+  padding-top: 2px;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+.contact-text h3 span {
+  float: left;
+  padding-bottom: 7px;
+}
+
+.contact-text p {
+  margin-left: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+#map .info-content {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#map .info-content h2 {
+  font-size: 25px;
+}
+
+#map .info-content p {
+  font-size: 15px;
+}
+
+/**
+ * 3. Middle
+ * -----------------------------------------------------------------------------
+ */
+#middle {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+#middle .bg {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#middle .bg.youtube {
+  overflow: hidden;
+}
+
+#middle .bg.youtube .in {
+  position: absolute;
+  z-index: -1;
+}
+
+#middle .bg.youtube .in iframe {
+  position: absolute;
+  left: 0;
+}
+
+#middle .bg#single {
+  background: url("../images/slider/img4.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#middle .overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+
+#middle .middle {
+  position: absolute;
+  z-index: 0;
+  left: 25%;
+  width: 50%;
+  padding-top: 50px;
+  text-align: center;
+  -webkit-transition: left, 1.5s;
+  -moz-transition: left, 1.5s;
+  transition: left, 1.5s;
+}
+
+#middle .middle .logo {
+  display: inline-block;
+}
+
+#middle .middle h1 {
+  margin: 50px 0 10px;
+  font-size: 70px;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+
+#middle .middle h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#middle .middle > p {
+  margin: 0 0 60px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+#middle .middle .menu {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#middle .middle .menu a {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+  margin: 0 25px 10px;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#middle .middle .menu a:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/**
+ * 3.1 Countdown
+ * -----------------------------------------------------------------------------
+ */
+.countdown {
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 5px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.countdown #countdown {
+  margin: 0 auto;
+  width: 720px;
+}
+
+.countdown #countdown span {
+  float: left;
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  border-right: 1px solid #fff;
+  text-align: center;
+  line-height: 70px;
+  font-weight: 400;
+  font-size: 60px;
+  font-family: "Cuprum";
+}
+
+.countdown #countdown span:first-child {
+  border-left: 1px solid #fff;
+}
+
+/**
+ * 3.2 Subscribe form
+ * -----------------------------------------------------------------------------
+ */
+#subscribe-form {
+  margin-top: 35px;
+}
+
+#subscribe-form > div {
+  position: relative;
+}
+
+#subscribe-form > div input {
+  float: left;
+  width: 280px;
+  height: 40px;
+  background: none;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #000;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 17px;
+}
+
+#subscribe-form > div button {
+  float: left;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #000;
+  border-left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 17px;
+  color: #fff;
+}
+
+#subscribe-form > div label {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+#subscribe-form > div i {
+  display: none;
+}
+
+#subscribe-form .message {
+  margin-top: 10px;
+}
+
+/**
+ * 3.3 Social
+ * -----------------------------------------------------------------------------
+ */
+#social {
+  -webkit-transition: left, 1.5s;
+  -moz-transition: left, 1.5s;
+  transition: left, 1.5s;
+  position: absolute;
+  z-index: 0;
+  left: 25%;
+  bottom: 20px;
+  width: 50%;
+  padding-top: 0;
+  text-align: center;
+}
+
+#social a {
+  padding: 0 10px;
+}
+
+#social a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+/**
+ * 4. Responsive
+ * -----------------------------------------------------------------------------
+ */
+@media (max-width: 479px) {
+  .close {
+    width: 20px;
+    height: 20px;
+    background: url("../img/close-small.png");
+  }
+  .team .item {
+    margin-bottom: 20px;
+  }
+  #moreInfoPopup, #contactPopup {
+    padding: 0;
+  }
+  #moreInfoPopup .team > div > div {
+    width: 100%;
+  }
+  #middle .middle h1 {
+    font-size: 25px;
+    margin: 25px 0 5px;
+  }
+  #middle .middle h2 {
+    font-size: 12px;
+  }
+  #subscribe-form > div input {
+    width: 180px;
+  }
+  #subscribe-form > div button {
+    width: 100px;
+  }
+  .countdown, #subscribe-form {
+    margin-top: 25px;
+  }
+  .countdown #countdown {
+    width: 288px;
+  }
+  .countdown #countdown span {
+    width: 72px;
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 479px) and (max-width: 992px) {
+  #middle .middle h1 {
+    font-size: 45px;
+  }
+  #middle .middle h2 {
+    font-size: 17px;
+  }
+  .countdown #countdown {
+    width: 480px;
+  }
+  .countdown #countdown span {
+    width: 120px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  #subscribe-form > div input {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #middle .middle,
+  #middle #social {
+    left: 5%;
+    width: 90%;
+  }
+  .remodal {
+    max-width: 98%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .remodal {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+  #middle .middle h1 {
+    font-size: 64px;
+  }
+}
+
+@media (min-height: 680px) {
+  .countdown {
+    margin-top: 65px;
+  }
+  #middle .middle .menu {
+    margin-top: 65px;
+  }
+}
+
+@media (min-height: 769px) {
+  #middle .middle {
+    padding-top: 7%;
+  }
+  #middle #social {
+    bottom: 50px;
+  }
+}

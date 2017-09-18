@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400);
+body {
+  font-family: Lato, Tahoma;
+  color: #888;
+  font-size: 0.8em;
+}
+
+a {
+  color: #8dab22;
+  text-decoration: none
+}
+
+a:hover {
+  color: #668300;
+  text-decoration: none
+}

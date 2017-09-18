@@ -1,0 +1,32 @@
+$default-color: #4982c3;
+$default-color-opacity: rgba(73,130,195,0.8);
+
+::selection {
+  background: $default-color;
+}
+
+#middle .middle .menu a:hover {
+  color: $default-color;
+}
+
+.em {
+  color: $default-color;
+}
+
+#contact-form div > div .btn-primary,
+#subscribe-form > div button {
+  background: $default-color;
+  &:hover {
+    background: $default-color-opacity;
+  }
+}
+
+#social a:hover i {
+  color: $default-color;
+}
+
+.contact-text h3{
+  span {
+    border-bottom: 1px solid $default-color;
+  }
+}

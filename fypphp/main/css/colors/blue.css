@@ -1,0 +1,29 @@
+::selection {
+  background: #4982c3;
+}
+
+#middle .middle .menu a:hover {
+  color: #4982c3;
+}
+
+.em {
+  color: #4982c3;
+}
+
+#contact-form div > div .btn-primary,
+#subscribe-form > div button {
+  background: #4982c3;
+}
+
+#contact-form div > div .btn-primary:hover,
+#subscribe-form > div button:hover {
+  background: rgba(73, 130, 195, 0.8);
+}
+
+#social a:hover i {
+  color: #4982c3;
+}
+
+.contact-text h3 span {
+  border-bottom: 1px solid #4982c3;
+}
