@@ -32,7 +32,7 @@ The most challenging objective was automatically syncing smart bracelet data wit
 
 # Theory
 
-# Auto synchronization everyday
+# Auto synchronization System 
 
 We set analysis.php that sent request to the Fitbit server by the updated access token and id as user updated each time. Throughout OAuth 2.0, we retrieved the cardio and physical datum from server in JSON format. In which, the analysis.php has different fragment to divided various and complicated JSON into different temporary session array. Thanks to Codeigniter framework, data will be retrieved then implemented into different database table.
 
@@ -49,7 +49,7 @@ For datum description in chart format, I would recommend to use the chart.js for
 
 For general outlook, PHP would mainly adopt Google Material instead of bootstrap. For further data manipulation, it would be adopts Kendo UI or EasyUI. Sketch and pingedo is recommended to be used for the professional web design. For code background implementation of web, using Codekit as framework and CodeIgniter as backbone would be recommended.
 
-#  Architecture
+#  Architecture Of PHP Portal
 
 Inherited from Fitbit Fighter Game developed by FYP21,the Fitbit Fighter dashboard aims for provided a dynamic data visualization for user 's family and their friends.Including they could easily compare their game point and health datum between their friends and their family. Due by limitation from android gaming, data visualization are looked as unclear and cannot maximize the characteristics of data visualize. Therefore, Fitbit fighter dashboard 's goal is provided a fruitful and user oriented dashboard for PC Users that they didn’t have memory allocation problem instead of those android users. 
 
