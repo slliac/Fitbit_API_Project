@@ -1,4 +1,3 @@
-# FYP 2016  -  2017 
 # HKUST Computer Science and Engineering Department 
 # Topic : Fitbit API related Family traced project
 
